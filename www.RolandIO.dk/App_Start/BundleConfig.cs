@@ -3,9 +3,19 @@ using System.Web.Optimization;
 
 namespace www.RolandIO.dk
 {
+    /// <summary>
+    /// The bundle config.
+    /// </summary>
     public class BundleConfig
     {
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
+
+        /// <summary>
+        /// The register bundles.
+        /// </summary>
+        /// <param name="bundles">
+        /// The bundles.
+        /// </param>
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
@@ -24,7 +34,7 @@ namespace www.RolandIO.dk
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                      "~/Content/bootstrap_dark.css",
                       "~/Content/site.css"));
         }
     }
