@@ -1,15 +1,34 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿
+// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="AccountViewModels.cs" company="RolandIO">
+// All rights reserved Mark Roland  
+// </copyright>
+// <summary>
+//   The external login confirmation view model.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
 
 namespace www.RolandIO.dk.Models
 {
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+
+    /// <summary>
+    /// The external login confirmation view model.
+    /// </summary>
     public class ExternalLoginConfirmationViewModel
     {
+        /// <summary>
+        /// Gets or sets the email.
+        /// </summary>
         [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }
     }
 
+    /// <summary>
+    /// The external login list view model.
+    /// </summary>
     public class ExternalLoginListViewModel
     {
         public string ReturnUrl { get; set; }
