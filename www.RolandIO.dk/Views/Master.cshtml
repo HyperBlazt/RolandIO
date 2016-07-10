@@ -33,45 +33,46 @@
 	<![endif]-->
   </head>
 
-  <body>
-	<header>
-	  <div class="container">
+<body>
+@{ Html.RenderPartial("~/Views/Partials/Contact Box/ContacBox.cshtml"); }
+<header>
+	<div class="container">
 		<div class="row">
-		  <div class="col-xs-8 col-sm-12 col-md-4">
-			<a href="@home.Url">
-				<div class="brand" style="background-image:url('@(home.SiteLogo)?height=65&width=205&bgcolor=000')"></div>
-			</a>
-		  </div>
-		  <div class="col-sm-12 col-md-8">
-			<nav>
-			  
-			  @{ Html.RenderPartial("MainNavigation"); }
+			<div class="col-xs-8 col-sm-12 col-md-4">
+				<a href="@home.Url">
+					<div class="brand" style="background-image: url('@(home.SiteLogo)?height=65&width=205&bgcolor=000')"></div>
+				</a>
+			</div>
+			<div class="col-sm-12 col-md-8">
+				<nav>
 
-			</nav>
-		  </div>
+					@{ Html.RenderPartial("~/Views/Partials/MainNavigation.cshtml"); }
+
+				</nav>
+			</div>
 		</div>
-	  </div>
+	</div>
 
-	  <div id="toggle" class="toggle">
+	<div id="toggle" class="toggle">
 		<a href="#" class="cross"><span></span></a>
-	  </div>
-	</header>
-	
-	@RenderBody()
+	</div>
+</header>
 
-	<footer class="field dark">
-	  <div class="container">
+@RenderBody()
+
+<footer class="field dark">
+	<div class="container">
 		<div class="row">
-			
-		  @{ Html.RenderPartial("BottomNavigation"); }
+
+			@{ Html.RenderPartial("~/Views/Partials/BottomNavigation.cshtml"); }
 
 		</div>
-	  </div>
-	</footer>
-	
-	<!-- Javascripts -->
-	<script src="/js/jquery.min.js"></script>
-	<script src="/js/bootstrap.min.js"></script>
-	<script src="/scripts/fanoe.js"></script>
-  </body>
+	</div>
+</footer>
+
+<!-- Javascripts -->
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/scripts/fanoe.js"></script>
+</body>
 </html>
